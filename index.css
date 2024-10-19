@@ -1,10 +1,15 @@
 * {
-    margin: 0;
+    margin: 5;
     background-color: #111;
     color: white;
-    font-family: Times New Roman;
-  }
-  
+    font-family: Times;
+}
+
+    body { 
+        margin: 25px; 
+    }
+
+
   .container {
     display: flex;
     flex-direction: column;
@@ -55,6 +60,11 @@
      font-size: 120px;
   }
   
+  a {
+    text-align: center;
+
+  }
+
   
   /* Content area styling */
   .content {
@@ -76,9 +86,6 @@
 
   
 /* marquee */
-body { 
-    margin: 5px; 
-  }
   
   .marquee {
     height: 30px; /* Slightly increased height for better visibility */
@@ -116,13 +123,12 @@ body {
     display: block;
     background-color: darkgrey;
     color: black;
-
     margin-bottom: 10px; /* Space between buttons */
     text-align: center;
-    line-height: 50px; /* Center the text vertically */
-    font-family: 'Times New Roman', serif;
+    line-height: 20px; /* Center the text vertically */
+    font-family: 'Times New Roman';
     border-style: solid;
-    border-width: 4px;
+    border-width: 3px;
     border-left-color: white;
     border-top-color: white;
     border-bottom-color: dimgrey;
@@ -138,10 +144,13 @@ body {
 /* Hover and Active States */
 .sidebar-btn:hover {
     background-color: grey;
+    font-family: 'Trebuchet MS';
     color: white;
+    
 }
 
 .sidebar-btn:active {
+    font-family: 'Webdings';
     background-color: darkgrey;
     color: black;
     border-left-color: dimgrey;
