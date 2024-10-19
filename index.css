@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    background-color: #333;
+    color: white;
+    font-family: Times New Roman;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Header styling */
+  .header h1 {
+      padding: 20px;
+      text-align: center;
+      font-size: 72px; /* Make the font extra tall */
+      letter-spacing: 2px; /* Add spacing between letters to make it wider */
+      transform: scale(4, 0.7); /* Stretch the font horizontally */
+  }
+  
+  
+  
+  .header img {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    height: 150px;
+  }
+  
+  /* Main content layout */
+  .main-content {
+    display: flex;
+    flex: 1;
+  }
+  
+  /* Sidebar styling */
+  .sidebar {
+    background-color: #555;
+    width: 200px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin: 10px 0;
+  }
+  
+  symbol {
+     text-align: center;
+     font-size: 120px;
+  }
+  /* Content area styling */
+  .content {
+    flex: 1;
+    background-color: #666;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .content img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #888;
+  }
