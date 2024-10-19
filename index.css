@@ -16,7 +16,7 @@
       text-align: center;
       font-size: 72px; /* Make the font extra tall */
       letter-spacing: 2px; /* Add spacing between letters to make it wider */
-      transform: scale(4, 0.7); /* Stretch the font horizontally */
+      transform: scale(1.25, 0.25); /* Stretch the font horizontally */
   }
   
   
@@ -54,6 +54,8 @@
      text-align: center;
      font-size: 120px;
   }
+  
+  
   /* Content area styling */
   .content {
     flex: 1;
@@ -69,3 +71,43 @@
     height: auto;
     border: 2px solid #888;
   }
+
+
+
+  
+/* marquee */
+body { 
+    margin: 5px; 
+  }
+  
+  .marquee {
+    height: 30px; /* Slightly increased height for better visibility */
+    width: 100%; /* Set to full width for better fit */
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .marquee div {
+    display: flex; /* Use flex to align items better */
+    gap: 20px;
+    position: absolute;
+    animation: marquee 55s linear infinite; /* Slowed down animation */
+  }
+  
+  .marquee span {
+    flex-shrink: 0; /* Prevent shrinking */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Adjust to scroll halfway, considering the duplicated content */
+  }
+
+  /* Add a symbol after each span */
+.marquee span::after {
+    content: " ♪"; /* The symbol to use (space before it for separation) */
+    margin-left: 10px; /* Space between the text and the symbol */
+    color: grey; /* Optional: color the symbol */
+  }
+  
