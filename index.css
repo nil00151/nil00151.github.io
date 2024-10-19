@@ -1,6 +1,6 @@
 * {
     margin: 0;
-    background-color: #333;
+    background-color: #111;
     color: white;
     font-family: Times New Roman;
   }
@@ -58,7 +58,7 @@
   
   /* Content area styling */
   .content {
-    flex: 1;
+    flex: auto;
     background-color: #666;
     padding: 20px;
     display: grid;
@@ -111,3 +111,45 @@ body {
     color: grey; /* Optional: color the symbol */
   }
   
+/* Sidebar Button */
+.sidebar-btn {
+    display: block;
+    background-color: darkgrey;
+    color: black;
+
+    margin-bottom: 10px; /* Space between buttons */
+    text-align: center;
+    line-height: 50px; /* Center the text vertically */
+    font-family: 'Times New Roman', serif;
+    border-style: solid;
+    border-width: 4px;
+    border-left-color: white;
+    border-top-color: white;
+    border-bottom-color: dimgrey;
+    border-right-color: dimgrey;
+    -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
+    text-decoration: none; /* Remove underline from links */
+    user-select: none;
+    cursor: pointer;
+}
+
+/* Hover and Active States */
+.sidebar-btn:hover {
+    background-color: grey;
+    color: white;
+}
+
+.sidebar-btn:active {
+    background-color: darkgrey;
+    color: black;
+    border-left-color: dimgrey;
+    border-top-color: dimgrey;
+    border-bottom-color: white;
+    border-right-color: white;
+    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+}
+
