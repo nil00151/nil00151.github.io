@@ -1,164 +1,167 @@
+/* Global Styles */
 * {
-    margin: 5;
+    margin: 0;
+    padding: 0;
     background-color: #111;
     color: white;
-    font-family: Times;
+    font-family: Times, serif;
+    box-sizing: border-box;
 }
 
-    body { 
-        margin: 2px; 
-    }
+body {
+    margin: 2px;
+
+    /* overflow: hidden; ENABLE FOR NON-SCROLL */
 
 
-  .container {
+}
+
+/* Anchor Styling */
+a {
+    text-align: center;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Container */
+.container {
     display: flex;
     flex-direction: column;
-  }
-  
-  /* Header styling */
-  .header h1 {
-      padding: 20px;
-      text-align: center;
-      font-size: 72px; /* Make the font extra tall */
-      letter-spacing: 2px; /* Add spacing between letters to make it wider */
-      transform: scale(1.25, 0.25); /* Stretch the font horizontally */
-  }
-  
-  
-  
-  .header img {
+    height: 100vh; /* Full viewport height */
+}
+
+/* Header Styling */
+.header h1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 72px;
+    letter-spacing: 2px;
+    transform: scale(1.25, 0.25);
+}
+
+.header img {
     position: absolute;
     top: 10px;
     left: 10px;
     width: 150px;
     height: 150px;
-  }
-  
-  /* Main content layout */
-  .main-content {
+}
+
+/* Main Content Layout */
+.main-content {
     display: flex;
     flex: 1;
-  }
-  
-  /* Sidebar styling */
-  .sidebar {
-    background-color: #555;
-    width: 200px;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  .sidebar a {
-    display: block;
-    color: white;
-    text-decoration: none;
-    margin: 10px 0;
-  }
-  
-  symbol {
-     text-align: center;
-     font-size: 120px;
-  }
-  
-  a {
+    flex-wrap: wrap; /* Allows wrapping when space is limited */
+}
+
+/* Symbol Styling */
+symbol {
     text-align: center;
+    font-size: 120px;
+}
 
-  }
-
-  
-  /* Content area styling */
-  .content {
-    flex: auto;
+/* Content Area Styling */
+.content {
+    flex: 1;
     background-color: #666;
     padding: 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  
-  .content img {
+    gap: 10px;
+}
+
+/* Image Styling in Content */
+.content img {
     width: 100%;
     height: auto;
-    border: 2px solid #888;
-  }
+    border: 5px solid #888;
+}
 
-
-
-  
-/* marquee */
-  
-  .marquee {
-    height: 30px; /* Slightly increased height for better visibility */
-    width: 100%; /* Set to full width for better fit */
+/* Marquee */
+.marquee {
+    height: 30px;
+    width: 100%;
     overflow: hidden;
     position: relative;
-  }
-  
-  .marquee div {
-    display: flex; /* Use flex to align items better */
+}
+
+.marquee div {
+    display: flex;
     gap: 20px;
     position: absolute;
-    animation: marquee 55s linear infinite; /* Slowed down animation */
-  }
-  
-  .marquee span {
-    flex-shrink: 0; /* Prevent shrinking */
-    white-space: nowrap; /* Prevent text wrapping */
-  }
-  
-  @keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Adjust to scroll halfway, considering the duplicated content */
-  }
+    animation: marquee 55s linear infinite;
+}
 
-  /* Add a symbol after each span */
+.marquee span {
+    white-space: nowrap;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
 .marquee span::after {
-    content: " ♪"; /* The symbol to use (space before it for separation) */
-    margin-left: 10px; /* Space between the text and the symbol */
-    color: grey; /* Optional: color the symbol */
-  }
-  
+    content: " ♪";
+    margin-left: 10px;
+    color: grey;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    background-color: #555;
+    width: 200px;
+    padding: 20px;
+    flex-shrink: 0; /* Prevents shrinking */
+}
+
+/* Sidebar Links */
+.sidebar a {
+    display: block;
+    margin: 10px 0;
+}
+
 /* Sidebar Button */
 .sidebar-btn {
-    display: block;
-    background-color: darkgrey;
+    background-color: #999;
     color: black;
-    margin-bottom: 10px; /* Space between buttons */
+    margin-bottom: 10px;
     text-align: center;
-    line-height: 20px; /* Center the text vertically */
-    font-family: 'Times New Roman';
-    border-style: solid;
-    border-width: 3px;
-    border-left-color: white;
-    border-top-color: white;
-    border-bottom-color: dimgrey;
-    border-right-color: dimgrey;
-    -webkit-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
-    box-shadow: 2px 2px 0px 0px rgba(0,0,0,0.75);
-    text-decoration: none; /* Remove underline from links */
+    line-height: 20px;
+    border: 3px solid;
+    border-color: white white dimgrey dimgrey;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.75);
     user-select: none;
     cursor: pointer;
 }
 
-/* Hover and Active States */
+/* Hover and Active States for Sidebar Button */
 .sidebar-btn:hover {
     background-color: grey;
-    font-family: 'Trebuchet MS';
     color: white;
-    
 }
 
 .sidebar-btn:active {
-    font-family: 'Webdings';
     background-color: darkgrey;
     color: black;
-    border-left-color: dimgrey;
-    border-top-color: dimgrey;
-    border-bottom-color: white;
-    border-right-color: white;
-    -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    border-color: dimgrey dimgrey white white;
+    box-shadow: none;
 }
 
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column; /* Stack sidebar and content vertically */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width for sidebar in stacked layout */
+        order: 1; /* Sidebar appears above content */
+    }
+
+    .content {
+        order: 2;
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+    }
+}
